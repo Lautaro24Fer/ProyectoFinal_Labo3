@@ -26,6 +26,7 @@ body{
     background-color: var(--color1);
     color: var(--color2);
     font-family:'Segoe UI', sans-serif;
+    color: var(--color2);
 }
 
 .grid-container{
@@ -55,6 +56,7 @@ header .logo{
 .logo svg{
     height: 2em;
 }
+
 
 /**/
 
@@ -93,8 +95,9 @@ footer .containerButtons button svg{
 
 /*contenedor de tweets*/
 
-.containerOfTweets{
+main{
     padding: 5em 0 6em 0;
+
 }
 
 .tweetElement{
@@ -194,4 +197,238 @@ footer .containerButtons button svg{
 .tweetElement .body-tweet .actions button svg{
     fill: var(--color2);
     height: 1.4em;
+}
+
+/*LOGIN*/
+
+article.logIn-container{
+    padding: 0 1em 0 1em;
+}
+
+article.logIn-container, article form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+    align-items: center;
+}
+
+article.logIn-container hr{
+    width: 100%;
+}
+
+article.logIn-container form{
+    width: 100%;
+}
+
+article.logIn-container form input{
+    height: 1em;
+    width: 100%;
+    color: var(--color3);
+    height: 3em;
+    background-color: transparent;
+    border: 1px solid var(--color3);
+    border-radius: .5em;
+    padding: 0 0 0 .5em;
+}
+
+article.logIn-container form button, .btn-crearCuenta{
+    background-color: var(--color2);
+    width: 100%;
+    border-radius: 1.5em;
+    color: var(--color1);
+    padding: .7em;
+    border: none;
+    font-weight: bold;
+}
+
+article.logIn-container .googleButton{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border: none;
+    border-radius: 1.2em;
+}
+
+/*SEARCH*/
+
+header.headerSearch{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.2em 1em 1.2em 1em;
+    align-items: center;
+}
+
+header.headerSearch .userImg, header.headerSearch .configButton{
+    display: grid;
+    place-items: center;
+}
+
+header.headerSearch .userImg{
+    border-radius: 50%;
+    height: 2.3em;
+    width: 2.3em;
+    border: 3px solid var(--color3);
+}
+
+header.headerSearch .userImg svg, header.headerSearch .configButton svg{
+    fill: var(--color2);
+    height: 1.2em;
+}
+
+header.headerSearch input{
+    background-color: transparent;
+    border: 1px solid var(--color3);
+    border-radius: 1em;
+    padding: .4em;
+    text-align: center;
+    color: var(--color2);
+}
+
+main section.containerOfTends{
+    display: flex;
+    flex-direction: column;
+    padding: 1em 0 0 0;
+    gap: 1.2em;
+}
+
+main section.containerOfTends .tendElement{
+    display: flex;
+    flex-direction: column;
+    padding: 0 .5em 0 .5em;
+}
+
+main section.containerOfTends .tendElement .text-header{
+    display: flex;
+    font-size: small;
+    color: gray;
+    gap: 1em;
+}
+
+main section.containerOfTends .tendElement .text-footer{
+    font-size: small;
+    color: var(--color3);
+}
+
+/**/
+
+aside.accountInfo{
+    background-color: var(--color1);
+    position: fixed;
+    top: 0;
+    left: -100%;
+    bottom: 0;
+    width: 80%;
+    z-index: 200;
+    padding: 0 .7em 0 .7em;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.70);
+-webkit-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.70);
+-moz-box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.70);
+transition: all .2s ease-in-out;
+}
+
+/* .openEvent{
+    transition: all .2s ease-in-out;
+    left: 0;
+    box-shadow: 122px 0px 0px 0px rgba(0,0,0,0.70);
+-webkit-box-shadow: 122px 0px 0px 0px rgba(0,0,0,0.70);
+-moz-box-shadow: 122px 0px 0px 0px rgba(0,0,0,0.70);
+} */
+
+/* aside.accountInfo{
+    background-color: var(--color1);
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    z-index: 200;
+    box-shadow: 122px 0px 0px 0px rgba(0,0,0,0.70);
+-webkit-box-shadow: 122px 0px 0px 0px rgba(0,0,0,0.70);
+-moz-box-shadow: 122px 0px 0px 0px rgba(0,0,0,0.70);
+    padding: 0 .7em 0 .7em;
+} */
+
+aside.accountInfo .userAccountInfo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    margin: 1em 0 1em 0;
+}
+
+aside.accountInfo .userAccountInfo #btnCuentas{
+    position: absolute;
+    margin: 1em;
+    right: 0;
+    top: 0;
+    background-color: transparent;
+    border: 2px solid var(--color2);
+    border-radius: 50%;
+    height: 1.5em;
+    width: 1.5em;
+    fill: var(--color2);
+    display: grid;
+    place-items: center;
+}
+
+aside.accountInfo .userAccountInfo .user-img{
+    height: 3em;
+    width: 3em;
+    border: 2px solid var(--color2);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+aside.accountInfo .userAccountInfo .user-img svg{
+    fill: var(--color2);
+    height: 1.3em;
+}
+
+aside.accountInfo .userAccountInfo .user-numbers{
+    display: flex;
+    gap: .3em;
+}
+
+aside.accountInfo section.user-services,
+aside.accountInfo section.user-community{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    padding: 1em 0 1em 0;
+}
+
+aside.accountInfo section.user-services .elementServices,
+aside.accountInfo section.user-community .elementServices{
+    display: flex;
+    align-items: center;
+    gap: .3em;
+}
+
+aside.accountInfo section.user-services .elementServices .logo,
+aside.accountInfo section.user-community .elementServices .logo{
+    display: grid;
+    place-items: center;
+}
+
+aside.accountInfo section.user-services .elementServices .logo svg,
+aside.accountInfo section.user-community .elementServices .logo svg{
+    height: 1.3em;
+}
+
+aside.accountInfo section.containerDarkMode{
+    margin: 2em 0 0 0;
+    bottom: 0;
+    left: 0;
+}
+
+aside.accountInfo section.containerDarkMode button{
+    background-color: transparent;
+    border: none;
+}
+
+aside.accountInfo section.containerDarkMode button svg{
+    fill: var(--color2);
+    height: 2em;
 }
